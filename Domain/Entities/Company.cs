@@ -9,5 +9,7 @@ namespace Domain.Entities
 {
     public class Company : LocalizableWithDescriptionEntity
     {
+        public Guid CityId { get; set; }
+        public City? City { get; set; }
     }
 }

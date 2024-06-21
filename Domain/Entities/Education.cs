@@ -9,7 +9,7 @@ namespace Domain.Entities
 {
     public class Education : LocalizableWithDescriptionEntity
     {
-        public Guid CountryId { get; set; }
-        public Country? Country { get; set; }
+        public Guid CityId { get; set; }
+        public City? City { get; set; }
     }
 }

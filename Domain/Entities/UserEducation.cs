@@ -13,7 +13,7 @@ namespace Domain.Entities
         public User? User { get; set; }
         public Guid EducationId { get; set; }
         public Education? Education { get; set; }
-        public DateOnly FromDate { get; set; }
-        public DateOnly ToDate { get; set; }
+        public DateOnly From { get; set; }
+        public DateOnly To { get; set; }
     }
 }

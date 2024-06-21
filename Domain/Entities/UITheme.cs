@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Country : LocalizableEntity
+    public class UITheme : LocalizableEntity
     {
+        public string? Photo {  get; set; }
     }
 }

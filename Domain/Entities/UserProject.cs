@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Certificate : LocalizableWithDescriptionEntity
+    public class UserProject : LocalizableWithDescriptionEntity
     {
         public Guid UserId { get; set; }
         public User? User { get; set; }
-        public string? CertificateUrl { get; set; }
-        public string? Credential { get; set; }
-        public DateOnly Issued { get; set; }
+        public string UrlSrc { get; set; } = null!;
+        public string? Url { get; set; }
+        public string? PhotoName { get; set; }
     }
 }
