@@ -13,7 +13,7 @@ namespace Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Company> builder)
         {
-            throw new NotImplementedException();
+            builder.HasData([.. DefaultCompanies]);
         }
 
         public static readonly List<Company> DefaultCompanies = [
