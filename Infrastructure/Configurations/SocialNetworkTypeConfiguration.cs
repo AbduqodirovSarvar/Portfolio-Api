@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class SocialNetworkTypeConfiguration : IEntityTypeConfiguration<SocialNetwork>
+    public class SocialNetworkTypeConfiguration : LocalizableEntityTypeConfiguration<SocialNetwork>
     {
-        public void Configure(EntityTypeBuilder<SocialNetwork> builder)
+        public override void Configure(EntityTypeBuilder<SocialNetwork> builder)
         {
+            base.Configure(builder);
             builder.HasData([.. DefaultSocialNetworks]);
         }
 

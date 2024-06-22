@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class UserExperienceTypeConfiguration : IEntityTypeConfiguration<UserExperience>
+    public class UserExperienceTypeConfiguration : BaseEntityTypeConfiguration<UserExperience>
     {
-        public void Configure(EntityTypeBuilder<UserExperience> builder)
+        public override void Configure(EntityTypeBuilder<UserExperience> builder)
         {
+            base.Configure(builder);
             builder.HasOne(x => x.User).WithMany(x => x.Experiences).HasForeignKey(x => x.UserId);
             builder.HasOne(x => x.WorkType).WithMany(x => x.UserExperience).HasForeignKey(x => x.WorkTypeId);
             builder.HasOne(x => x.Company).WithMany().HasForeignKey(x => x.CompanyId);

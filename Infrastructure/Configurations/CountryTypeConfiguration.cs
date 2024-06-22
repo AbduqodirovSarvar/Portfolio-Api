@@ -9,8 +9,14 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class CountryTypeConfiguration : IEntityTypeConfiguration<Country>
+    public class CountryTypeConfiguration : LocalizableEntityTypeConfiguration<Country>
     {
+        public override void Configure(EntityTypeBuilder<Country> builder)
+        {
+            base.Configure(builder);
+            builder.HasData([..Countries]);
+        }
+
         public static readonly List<Country> Countries = [
             new Country { Name = "Uzbekistan", NameUz = "O'zbekiston", NameEn = "Uzbekistan", NameRu = "Узбекистан" },
             new Country { Name = "Kazakhstan", NameUz = "Qozog'iston", NameEn = "Kazakhstan", NameRu = "Казахстан" },
@@ -25,9 +31,6 @@ namespace Infrastructure.Configurations
             new Country { Name = "Indonesia", NameUz = "Indoneziya", NameEn = "Indonesia", NameRu = "Индонезия" },
             new Country { Name = "Turkey", NameUz = "Turkiya", NameEn = "Turkey", NameRu = "Турция" },
             ];
-        public void Configure(EntityTypeBuilder<Country> builder)
-        {
-            builder.HasData([..Countries]);
-        }
+        
     }
 }

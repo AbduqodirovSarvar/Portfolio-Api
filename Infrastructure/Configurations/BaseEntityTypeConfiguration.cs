@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class BaseEntityTypeConfiguration : IEntityTypeConfiguration<BaseEntity>
+    public class BaseEntityTypeConfiguration<T> : IEntityTypeConfiguration<T> where T : BaseEntity
     {
-        public void Configure(EntityTypeBuilder<BaseEntity> builder)
+        public virtual void Configure(EntityTypeBuilder<T> builder)
         {
             builder.HasKey(x => x.Id);
             builder.HasQueryFilter(x => !x.IsDeleted);

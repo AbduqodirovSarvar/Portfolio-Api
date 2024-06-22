@@ -9,10 +9,14 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class PositionTypeConfiguration : IEntityTypeConfiguration<Position>
+    public class PositionTypeConfiguration : LocalizableWithDescriptionEntityTypeConfiguration<Position>
     {
-        public void Configure(EntityTypeBuilder<Position> builder)
+        public override void Configure(EntityTypeBuilder<Position> builder)
         {
+            base.Configure(builder);
+            builder.HasIndex(x => new { x.Name, x.NameUz, x.NameRu, x.NameEn }).IsUnique();
+            builder.HasIndex(x => new { x.Description, x.DescriptionUz, x.DescriptionRu, x.DescriptionEn }).IsUnique();
+            builder.HasMany(x => x.Users).WithOne(x => x.Position).HasForeignKey(x => x.PositionId);
             builder.HasData([.. DefaultPositions]);
         }
 

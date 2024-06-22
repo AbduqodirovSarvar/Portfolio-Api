@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class CityTypeConfiguration : IEntityTypeConfiguration<City>
+    public class CityTypeConfiguration : LocalizableEntityTypeConfiguration<City>
     {
-        public void Configure(EntityTypeBuilder<City> builder)
+        public override void Configure(EntityTypeBuilder<City> builder)
         {
+            base.Configure(builder);
             builder.HasOne(x => x.Country).WithMany(x => x.Cities).HasForeignKey(x => x.CountyId);
             builder.HasMany(x => x.Companies).WithOne(x => x.City).HasForeignKey(x => x.CityId);
             builder.HasMany(x => x.Educations).WithOne(x => x.City).HasForeignKey(x => x.CityId);

@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class WorkTypeEntityConfiguration : IEntityTypeConfiguration<WorkType>
+    public class WorkTypeEntityConfiguration : LocalizableWithDescriptionEntityTypeConfiguration<WorkType>
     {
-        public void Configure(EntityTypeBuilder<WorkType> builder)
+        public override void Configure(EntityTypeBuilder<WorkType> builder)
         {
+            base.Configure(builder);
             builder.HasData([.. DefaultWorkTypes]);
         }
 

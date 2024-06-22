@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class UserEducationTypeConfiguration : IEntityTypeConfiguration<UserEducation>
+    public class UserEducationTypeConfiguration : BaseEntityTypeConfiguration<UserEducation>
     {
-        public void Configure(EntityTypeBuilder<UserEducation> builder)
+        public override void Configure(EntityTypeBuilder<UserEducation> builder)
         {
+            base.Configure(builder);
             builder.HasOne(x => x.User).WithMany(x => x.Educations).HasForeignKey(x => x.UserId);
             builder.HasOne(x => x.Education).WithMany().HasForeignKey(x => x.EducationId);
             builder.HasData([.. DefaultUserEducations]);

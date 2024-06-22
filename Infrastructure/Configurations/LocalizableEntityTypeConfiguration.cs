@@ -9,14 +9,12 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class LocalizableEntityTypeConfiguration : IEntityTypeConfiguration<LocalizableEntity>
+    public class LocalizableEntityTypeConfiguration<T> : BaseEntityTypeConfiguration<T> where T : LocalizableEntity
     {
-        public void Configure(EntityTypeBuilder<LocalizableEntity> builder)
+        public override void Configure(EntityTypeBuilder<T> builder)
         {
-            builder.HasIndex(x =>
-            new {
-                x.Name, x.NameUz, x.NameRu, x.NameEn
-            }).IsUnique();
+            base.Configure(builder);
+            builder.HasIndex(x => new { x.Name, x.NameUz, x.NameRu, x.NameEn }).IsUnique();
         }
     }
 }

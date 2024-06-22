@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class PersonBaseEntityTypeConfiguration : IEntityTypeConfiguration<PersonBase>
+    public class PersonBaseEntityTypeConfiguration<T> : BaseEntityTypeConfiguration<T> where T : PersonBase
     {
-        public void Configure(EntityTypeBuilder<PersonBase> builder)
+        public override void Configure(EntityTypeBuilder<T> builder)
         {
+            base.Configure(builder);
             builder.HasIndex(x => x.Email).IsUnique();
             builder.HasIndex(x => x.Phone).IsUnique();
         }

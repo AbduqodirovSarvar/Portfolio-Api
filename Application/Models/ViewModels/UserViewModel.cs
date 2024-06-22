@@ -9,11 +9,8 @@ using System.Threading.Tasks;
 
 namespace Application.Models.ViewModels
 {
-    public class UserViewModel
+    public class UserViewModel : BaseEntityViewModel
     {
-        public Guid Id { get; }
-        public Guid? CreatedById { get; set; }
-        public DateTime CreatedAt { get; }
         public string Firstname { get; set; } = null!;
         public string Lastname { get; set; } = null!;
         public string? Middlename { get; set; }
@@ -22,7 +19,7 @@ namespace Application.Models.ViewModels
         public string Email { get; set; } = null!;
         public string Phone { get; set; } = null!;
         public Guid PositionId { get; set; }
-        public Position? Position { get; set; }
+        public PositionViewModel? Position { get; set; }
         public string? AboutMe { get; set; }
         public string? PhotoName { get; set; }
         public string? ResumeName { get; set; }

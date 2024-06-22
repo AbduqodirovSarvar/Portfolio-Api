@@ -17,6 +17,7 @@ namespace Application.Mappings
             CreateMap<Enum, EnumViewModel>()
                 .ForMember(x => x.Id, y => y.MapFrom(z => Convert.ToInt32(z)))
                 .ForMember(x => x.Name, y => y.MapFrom(z => z.ToString()));
+            CreateMap<Position, PositionViewModel>().ReverseMap();
         }
     }
 }

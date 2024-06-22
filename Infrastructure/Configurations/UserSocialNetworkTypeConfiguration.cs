@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class UserSocialNetworkTypeConfiguration : IEntityTypeConfiguration<UserSocialNetwork>
+    public class UserSocialNetworkTypeConfiguration : BaseEntityTypeConfiguration<UserSocialNetwork>
     {
-        public void Configure(EntityTypeBuilder<UserSocialNetwork> builder)
+        public override void Configure(EntityTypeBuilder<UserSocialNetwork> builder)
         {
-            builder.HasOne(x => x.User).WithMany(x => x.SocialNetworks).HasForeignKey(x => x.UserId);
+            base.Configure(builder);
             builder.HasOne(x => x.SocialNetwork).WithMany().HasForeignKey(x => x.SocialNetworkId);
             builder.HasIndex(x => new { x.UserId, x.SocialNetworkId }).IsUnique();
             builder.HasIndex(x => x.Url).IsUnique();

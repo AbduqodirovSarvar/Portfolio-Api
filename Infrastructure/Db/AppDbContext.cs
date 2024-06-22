@@ -11,13 +11,8 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Db
 {
-    public class AppDbContext : DbContext, IAppDbContext
+    public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options), IAppDbContext
     {
-
-        public AppDbContext(DbContextOptions<AppDbContext> options)
-            : base(options)
-        {
-        }
         public DbSet<User> Users { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<City> Cities { get; set; }
@@ -41,8 +36,8 @@ namespace Infrastructure.Db
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            ApplyAllConfigurations(modelBuilder);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -50,33 +45,5 @@ namespace Infrastructure.Db
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.EnableSensitiveDataLogging();
         }
-
-        private void ApplyAllConfigurations(ModelBuilder modelBuilder)
-        {
-            var applyGenericMethod = typeof(ModelBuilder)
-                .GetMethods()
-                .First(m => m.Name == nameof(ModelBuilder.ApplyConfiguration)
-                            && m.GetParameters().Length == 1);
-
-            var configurations = Assembly.GetExecutingAssembly().GetTypes()
-                .Where(t => t.GetInterfaces()
-                             .Any(i => i.IsGenericType
-                                       && i.GetGenericTypeDefinition() == typeof(IEntityTypeConfiguration<>)))
-                .ToList();
-
-            foreach (var config in configurations)
-            {
-                var entityType = config.GetInterfaces()
-                                       .First(i => i.IsGenericType
-                                                   && i.GetGenericTypeDefinition() == typeof(IEntityTypeConfiguration<>))
-                                       .GenericTypeArguments
-                                       .First();
-
-                var applyConcreteMethod = applyGenericMethod.MakeGenericMethod(entityType);
-                var configurationInstance = Activator.CreateInstance(config);
-                applyConcreteMethod.Invoke(modelBuilder, [configurationInstance]);
-            }
-        }
-
     }
 }

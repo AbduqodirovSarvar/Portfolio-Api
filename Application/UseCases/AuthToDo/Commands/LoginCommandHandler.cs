@@ -32,33 +32,42 @@ namespace Application.UseCases.AuthToDo.Commands
         public async Task<LoginViewModel> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
             var user = await _context.Users
-                                .Include(x => x.Languages).ThenInclude(l => l.Language)
-                                .Include(x => x.Languages).ThenInclude(l => l.Level)
-                                .Include(x => x.Projects)
-                                .Include(x => x.Skills).ThenInclude(x => x.Skill)
-                                .Include(x => x.Certificates)
-                                .Include(x => x.Educations).ThenInclude(x => x.Education)
-                                .Include(x => x.Experiences).ThenInclude(x => x.Company)
-                                .Include(x => x.Experiences).ThenInclude(x => x.Position)
-                                .Include(x => x.Experiences).ThenInclude(x => x.WorkType)
-                                .FirstOrDefaultAsync(x => x.Email == request.Email, cancellationToken: cancellationToken)
-                                ?? throw new NotFoundException("User not found");
+                .Include(u => u.Position)
+/*                .Include(u => u.Languages).ThenInclude(ul => ul.Language)
+                .Include(u => u.Languages).ThenInclude(ul => ul.Level)
+                .Include(u => u.Projects)
+                .Include(u => u.Skills).ThenInclude(us => us.Skill)
+                .Include(u => u.Certificates)
+                .Include(u => u.Educations).ThenInclude(ue => ue.Education)
+                .Include(u => u.Experiences).ThenInclude(ue => ue.Company)
+                .Include(u => u.Experiences).ThenInclude(ue => ue.Position)
+                .Include(u => u.Experiences).ThenInclude(ue => ue.WorkType)*/
+                .FirstOrDefaultAsync(u => u.Email == request.Email, cancellationToken);
 
-            _logger.LogInformation(message: "User found with identifier {userId}", user.Id);
-
-            if(!_hashService.VerifyHash(request.Password, user.PasswordHash))
+            if (user == null)
             {
+                _logger.LogInformation("User with email {Email} not found", request.Email);
+                throw new NotFoundException("User not found");
+            }
+
+            _logger.LogInformation("User found with identifier {UserId}", user.Id);
+
+            if (!_hashService.VerifyHash(request.Password, user.PasswordHash))
+            {
+                _logger.LogWarning("Invalid password attempt for user {UserId}", user.Id);
                 throw new LoginException();
             }
 
             var claims = new List<Claim>
-                {
-                    new(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                };
+            {
+                new(ClaimTypes.NameIdentifier, user.Id.ToString())
+            };
 
-            _logger.LogInformation("Gave access token for identifier Id: {Identifier}", user.Id);
+            _logger.LogInformation("Access token issued for user {UserId}", user.Id);
 
-            return new LoginViewModel(_mapper.Map<UserViewModel>(user), _tokenService.GetAccessToken([.. claims]));
+            var loginViewModel = new LoginViewModel(_mapper.Map<UserViewModel>(user), _tokenService.GetAccessToken([.. claims]));
+
+            return loginViewModel;
         }
     }
 }

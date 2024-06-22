@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class EducationTypeConfiguration : IEntityTypeConfiguration<Education>
+    public class EducationTypeConfiguration : BaseEntityTypeConfiguration<Education>
     {
-        public void Configure(EntityTypeBuilder<Education> builder)
+        public override void Configure(EntityTypeBuilder<Education> builder)
         {
+            base.Configure(builder);
+            builder.HasIndex(x => new { x.CityId, x.Name, x.NameEn, x.NameUz, x.NameRu, x.Description, x.DescriptionEn, x.DescriptionRu, x.DescriptionUz });
             builder.HasData([.. DefaultEducations]);
         }
 

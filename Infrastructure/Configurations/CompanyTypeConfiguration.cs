@@ -9,16 +9,19 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class CompanyTypeConfiguration : IEntityTypeConfiguration<Company>
+    public class CompanyTypeConfiguration : BaseEntityTypeConfiguration<Company>
     {
-        public void Configure(EntityTypeBuilder<Company> builder)
+        public override void Configure(EntityTypeBuilder<Company> builder)
         {
+            base.Configure(builder);
+            builder.HasIndex(x => new { x.CityId, x.Name, x.NameEn, x.NameUz, x.NameRu, x.Description, x.DescriptionEn, x.DescriptionRu, x.DescriptionUz });
             builder.HasData([.. DefaultCompanies]);
         }
 
         public static readonly List<Company> DefaultCompanies = [
             new Company
             {
+                CityId = CityTypeConfiguration.UzbekistanCities[0].Id,
                 Name = "ITransition",
                 NameUz = "ITransition",
                 NameEn = "ITransition",
@@ -30,6 +33,7 @@ namespace Infrastructure.Configurations
             },
             new Company
             {
+                CityId = CityTypeConfiguration.UzbekistanCities[0].Id,
                 Name = "BePro-DEVHUB",
                 NameUz = "BePro-DEVHUB",
                 NameEn = "BePro-DEVHUB",
@@ -41,6 +45,7 @@ namespace Infrastructure.Configurations
             },
             new Company
             {
+                CityId = CityTypeConfiguration.UzbekistanCities[0].Id,
                 Name = "EPAM",
                 NameUz = "EPAM",
                 NameEn = "EPAM",
@@ -52,6 +57,7 @@ namespace Infrastructure.Configurations
             },
             new Company
             {
+                CityId = CityTypeConfiguration.UzbekistanCities[0].Id,
                 Name = "EXADEL",
                 NameUz = "EXADEL",
                 NameEn = "EXADEL",

@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class LevelTypeConfiguration : IEntityTypeConfiguration<Level>
+    public class LevelTypeConfiguration : LocalizableWithDescriptionEntityTypeConfiguration<Level>
     {
-        public void Configure(EntityTypeBuilder<Level> builder)
+        public override void Configure(EntityTypeBuilder<Level> builder)
         {
+            base.Configure(builder);
             builder.HasData([.. DefaultLevels]);
         }
 

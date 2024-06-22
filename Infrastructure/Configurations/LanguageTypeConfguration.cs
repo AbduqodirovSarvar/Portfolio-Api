@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class LanguageTypeConfguration : IEntityTypeConfiguration<Language>
+    public class LanguageTypeConfguration : LocalizableEntityTypeConfiguration<Language>
     {
-        public void Configure(EntityTypeBuilder<Language> builder)
+        public override void Configure(EntityTypeBuilder<Language> builder)
         {
+            base.Configure(builder);
             builder.HasData([.. DefaultLanguages]);
         }
 

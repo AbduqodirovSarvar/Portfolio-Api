@@ -10,10 +10,11 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Configurations
 {
-    public class UserLanguageTypeConfiguration : IEntityTypeConfiguration<UserLanguage>
+    public class UserLanguageTypeConfiguration : BaseEntityTypeConfiguration<UserLanguage>
     {
-        public void Configure(EntityTypeBuilder<UserLanguage> builder)
+        public override void Configure(EntityTypeBuilder<UserLanguage> builder)
         {
+            base.Configure(builder);
             builder.HasOne(x => x.User).WithMany(x => x.Languages).HasForeignKey(x => x.UserId);
             builder.HasOne(x => x.Language).WithMany().HasForeignKey(x => x.LanguageId);
             builder.HasOne(x => x.Level).WithMany().HasForeignKey(x => x.LevelId);
