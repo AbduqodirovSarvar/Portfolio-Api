@@ -1,4 +1,5 @@
-﻿using Domain.Abstractions;
+﻿using Domain.Entities;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,18 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Application.Models.ViewModels
 {
-    public class User : PersonBase
+    public class UserViewModel
     {
+        public Guid Id { get; }
+        public Guid? CreatedById { get; set; }
+        public DateTime CreatedAt { get; }
+        public string Firstname { get; set; } = null!;
+        public string Lastname { get; set; } = null!;
+        public string? Middlename { get; set; }
+        public EnumViewModel? Gender { get; set; }
+        public DateOnly Birthday { get; set; }
+        public string Email { get; set; } = null!;
+        public string Phone { get; set; } = null!;
         public Guid PositionId { get; set; }
         public Position? Position { get; set; }
-        public string PasswordHash { get; set; } = null!;
         public string? AboutMe { get; set; }
         public string? PhotoName { get; set; }
         public string? ResumeName { get; set; }
-        public Guid? CityId { get; set; }
-        public City? City { get; set; }
         public Guid? UIThemeId { get; set; }
         public ICollection<UserLanguage> Languages { get; set; } = [];
         public ICollection<UserSkill> Skills { get; set; } = [];

@@ -28,13 +28,13 @@ namespace Application.Services
         {
             var model = new
             {
-                Name = "Test Email",
+                Name = "Email",
                 Email = email,
                 Message = body,
                 Subject = subject,
             };
 
-            body = $"<p>Email From: {model.Name} ({model.Email})</p><p>Message:</p><p>{model.Message}</p>";
+            body = $"<h3>{model.Subject}</h3><strong>Message: </strong><p>{model.Message}</p>";
 
             var message = new MailMessage();
             message.To.Add(new MailAddress(model.Email));

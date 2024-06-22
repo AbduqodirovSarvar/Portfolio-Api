@@ -9,5 +9,6 @@ namespace Domain.Entities
 {
     public class WorkType : LocalizableWithDescriptionEntity
     {
+        public ICollection<UserExperience> UserExperience { get; set; } = [];
     }
 }

@@ -9,6 +9,5 @@ namespace Domain.Entities
 {
     public class Skill : LocalizableWithDescriptionEntity
     {
-        public string? PhotoName { get; set; }
     }
 }

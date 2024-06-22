@@ -9,5 +9,6 @@ namespace Domain.Entities
 {
     public class Country : LocalizableEntity
     {
+        public ICollection<City> Cities { get; set; } = [];
     }
 }

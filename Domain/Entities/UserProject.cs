@@ -14,5 +14,6 @@ namespace Domain.Entities
         public string UrlSrc { get; set; } = null!;
         public string? Url { get; set; }
         public string? PhotoName { get; set; }
+        public ICollection<Skill> Skills { get; set; } = [];
     }
 }

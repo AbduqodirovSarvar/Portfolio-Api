@@ -19,5 +19,6 @@ namespace Domain.Abstractions
         public string Email { get; set; } = null!;
         [Phone]
         public string Phone { get; set; } = null!;
+        public bool EmailConfirmed { get; set; } = false;
     }
 }

@@ -13,5 +13,6 @@ namespace Domain.Entities
         public User? User { get; set; }
         public Guid SkillId { get; set; }
         public Skill? Skill { get; set; }
+        public string? PhotoName { get; set; }
     }
 }
