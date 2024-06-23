@@ -14,8 +14,7 @@ namespace Infrastructure.Configurations
         public override void Configure(EntityTypeBuilder<UserExperience> builder)
         {
             base.Configure(builder);
-            builder.HasOne(x => x.User).WithMany(x => x.Experiences).HasForeignKey(x => x.UserId);
-            builder.HasOne(x => x.WorkType).WithMany(x => x.UserExperience).HasForeignKey(x => x.WorkTypeId);
+            builder.HasOne(x => x.WorkType).WithMany().HasForeignKey(x => x.WorkTypeId);
             builder.HasOne(x => x.Company).WithMany().HasForeignKey(x => x.CompanyId);
             builder.HasOne(x => x.Position).WithMany().HasForeignKey(x => x.PositionId);
         }

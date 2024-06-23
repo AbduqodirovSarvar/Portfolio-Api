@@ -15,7 +15,6 @@ namespace Infrastructure.Configurations
         public override void Configure(EntityTypeBuilder<UserLanguage> builder)
         {
             base.Configure(builder);
-            builder.HasOne(x => x.User).WithMany(x => x.Languages).HasForeignKey(x => x.UserId);
             builder.HasOne(x => x.Language).WithMany().HasForeignKey(x => x.LanguageId);
             builder.HasOne(x => x.Level).WithMany().HasForeignKey(x => x.LevelId);
             builder.HasIndex(x => new { x.UserId, x.LanguageId }).IsUnique();

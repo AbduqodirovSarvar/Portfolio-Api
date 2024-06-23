@@ -11,7 +11,5 @@ namespace Domain.Entities
     {
         public Guid CountyId { get; set; }
         public Country? Country { get; set; }
-        public ICollection<Company> Companies { get; set; } = [];
-        public ICollection<Education> Educations { get; set; } = [];
     }
 }

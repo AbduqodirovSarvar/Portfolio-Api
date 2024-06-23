@@ -9,6 +9,6 @@ namespace Domain.Abstractions.Interfaces
     public interface IAudiTable
     {
         Guid? CreatedById { get; set; }
-        DateTime CreatedAt { get; }
+        DateTime CreatedAt { get; set; }
     }
 }

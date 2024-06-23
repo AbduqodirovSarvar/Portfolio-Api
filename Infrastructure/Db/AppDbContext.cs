@@ -1,7 +1,10 @@
 ﻿using Application.Abstractions;
+using Domain.Abstractions;
+using Domain.Abstractions.Interfaces;
 using Domain.Entities;
 using Infrastructure.Configurations;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +14,10 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Db
 {
-    public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options), IAppDbContext
+    public class AppDbContext(DbContextOptions<AppDbContext> options, ICurrentUserService currentUserService) : DbContext(options), IAppDbContext
     {
+        private readonly ICurrentUserService _currentUserService =currentUserService;
+
         public DbSet<User> Users { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<City> Cities { get; set; }
@@ -44,6 +49,31 @@ namespace Infrastructure.Db
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.EnableSensitiveDataLogging();
+        }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            SetAuditableEntity();
+            return base.SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task Seed()
+        {
+            using var _context = this.GetService<IAppDbContext>();
+           
+        }
+
+        private void SetAuditableEntity()
+        {
+            foreach (var entry in ChangeTracker.Entries<BaseEntity>())
+            {
+                if (entry.State == EntityState.Added)
+                {
+                    entry.Entity.Id = Guid.NewGuid();
+                    entry.Entity.CreatedById = _currentUserService.UserId;
+                    entry.Entity.CreatedAt = DateTime.UtcNow;
+                }
+            }
         }
     }
 }

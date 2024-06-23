@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240622185718_Initial")]
-    partial class Initial
+    [Migration("20240623060508_Initial3")]
+    partial class Initial3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,8 +65,8 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("326e9d9b-fff1-41f3-9832-e1538bbfb247"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("db2e80ab-037e-439c-a114-ad4639e77af6"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Tashkent",
                             NameEn = "Tashkent",
@@ -75,8 +75,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e09b7aa4-7e23-4448-b0e7-fcf14af88dc0"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("dd49522e-88ef-4caf-bd2f-76f7594e3a72"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Namangan",
                             NameEn = "Namangan",
@@ -85,8 +85,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2caa4b81-9f5c-41dc-9ae8-606f1638f9d8"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("48271681-cd6f-4d0d-bae5-133093479058"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Samarkand",
                             NameEn = "Samarkand",
@@ -95,8 +95,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("798527c0-ec1f-4599-9e98-4b93855a840b"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("c011077c-4dd3-4aa9-a427-3684dc0e036a"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Andijan",
                             NameEn = "Andijan",
@@ -105,8 +105,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0ddb4194-8a3c-4c04-be21-b396b3c644fc"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("5dbebdbe-b78c-47e0-b662-6b21786e085b"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Nukus",
                             NameEn = "Nukus",
@@ -115,8 +115,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("032d6d06-e71d-471f-8c07-03a83d1ed9b2"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("a7dde382-9254-4404-8a9b-5d55cc467bfd"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Fergana",
                             NameEn = "Fergana",
@@ -125,8 +125,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2b4db697-f46e-4717-801c-816f10e5e307"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("99212bad-723c-432c-932d-3d2bbd76458d"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Bukhara",
                             NameEn = "Bukhara",
@@ -135,8 +135,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c2e9b36b-acb5-4292-b60b-e0b611aaff18"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("2aec3896-791f-4825-b4f9-091415418f90"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Qarshi",
                             NameEn = "Qarshi",
@@ -145,8 +145,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7d14b288-47d6-454b-a2dd-42e66f1b2f91"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("e638fbf6-4780-4991-af32-61994eeca196"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Kokand",
                             NameEn = "Kokand",
@@ -155,8 +155,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1fea4888-3394-4192-95ad-7610dd1a7995"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("e48a4fed-bb96-4a11-a132-8fe12d059031"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Margilan",
                             NameEn = "Margilan",
@@ -165,8 +165,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2a4524f6-0341-4f7b-b19b-56ba270b30c1"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("816d4cbe-10eb-4ad5-991d-3af6458229aa"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Termez",
                             NameEn = "Termez",
@@ -175,8 +175,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c9640d08-ade0-47ba-b235-e514542fe9d2"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("fe6d2eb1-815f-48ef-91be-b8d74f4bba63"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Jizzakh",
                             NameEn = "Jizzakh",
@@ -185,8 +185,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d0b65890-5346-4519-84cf-9f770231b0c9"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("80c37036-1491-4bb8-9d7d-b39d3b616252"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Angren",
                             NameEn = "Angren",
@@ -195,8 +195,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4dd1affc-7d58-4c87-b022-26e1fcf5591c"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("b0caac3d-cdcb-499d-960a-ce4ec88e790b"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Chirchiq",
                             NameEn = "Chirchiq",
@@ -205,8 +205,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6586ca4d-d5cb-4716-9284-fb8ac1079c59"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("9fb78f56-05ba-4d31-8698-bdd84aa013b4"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Navoiy",
                             NameEn = "Navoiy",
@@ -215,8 +215,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("28997ebe-298c-4a11-a46c-dffee6eae28b"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("ddfbad79-a964-49e6-a732-91aebdf058e4"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Urgench",
                             NameEn = "Urgench",
@@ -225,8 +225,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e45bd380-ff43-4e96-9c90-91e2bee9dc22"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("83666c02-7d45-4f06-86fb-0a6172eb8d18"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Shahrisabz",
                             NameEn = "Shahrisabz",
@@ -235,8 +235,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9cb59fc6-5550-4a54-9835-bb2bd24598cf"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("ef4e563b-c544-484e-ba41-d3f777d8fe66"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Olmaliq",
                             NameEn = "Olmaliq",
@@ -245,8 +245,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c355afdf-4beb-4cfc-a53e-a522acde7d25"),
-                            CountyId = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("c748d06b-57ee-4729-97b0-43641d205a09"),
+                            CountyId = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Bekobod",
                             NameEn = "Bekobod",
@@ -255,8 +255,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ca5104fe-a277-4a36-8f6e-dff573db1d45"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("b6a194fd-bd5c-4085-9132-c3292fcd23b8"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Almaty",
                             NameEn = "Almaty",
@@ -265,8 +265,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("974e06f1-5624-43c6-aa85-ce9e49e4392d"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("1bc23e50-c519-42a7-a916-d5d75284405b"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Nur-Sultan",
                             NameEn = "Nur-Sultan",
@@ -275,8 +275,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("91413c5f-83d6-4a0c-afd3-a12623431810"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("a3db33cd-1a73-4361-bbb9-59138e13ea4b"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Shymkent",
                             NameEn = "Shymkent",
@@ -285,8 +285,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c6731248-8b0e-43b0-97de-cac5b9fde572"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("4259440f-67eb-47f2-a413-1c7cb836d2e9"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Karaganda",
                             NameEn = "Karaganda",
@@ -295,8 +295,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0d318c82-ca9b-4026-aef3-7bd2e72b1c4e"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("38c9db60-8ada-4f80-8775-6c2d81af0665"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Aktobe",
                             NameEn = "Aktobe",
@@ -305,8 +305,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("262531f5-9b94-463d-973d-9225cef89623"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("8396b574-a1df-4583-a1b7-f41dba65adc1"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Taraz",
                             NameEn = "Taraz",
@@ -315,8 +315,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ada2b73c-ce71-453a-bf5a-44396e96aa52"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("09359f72-a9eb-42dc-ab2a-0c2331289673"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Pavlodar",
                             NameEn = "Pavlodar",
@@ -325,8 +325,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("04645993-61be-44c6-8410-3dcce33776ea"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("45f2be63-0575-4997-b769-c2667a214e1e"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Ust-Kamenogorsk",
                             NameEn = "Ust-Kamenogorsk",
@@ -335,8 +335,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1aeb44cc-e679-4fa5-b9f8-818bcc5c5d0c"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("5da8d6ed-e24f-4d2c-aa50-f0a4eca406f7"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Semey",
                             NameEn = "Semey",
@@ -345,8 +345,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bc6c83ef-4270-4f41-804e-9d3c43206a38"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("dc30ac1b-8483-448e-bc65-be6c5d96e152"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Kostanay",
                             NameEn = "Kostanay",
@@ -355,8 +355,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("eb178f3d-5673-4dbd-80d8-e5f703d0ac2e"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("30305b6e-d0de-4026-9069-f436dc4cf9c4"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Petropavl",
                             NameEn = "Petropavl",
@@ -365,8 +365,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("aed4a3c1-f088-493b-80a3-7ef420ffb2fb"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("f614fcb3-e3b8-486f-8639-cca64bb96d66"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Oral",
                             NameEn = "Oral",
@@ -375,8 +375,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("9bb84bb9-beb5-40d5-8a5e-d8b0d20826cc"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("dfdb0ce3-eebb-4bab-83d9-d08f00a4f737"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Kyzylorda",
                             NameEn = "Kyzylorda",
@@ -385,8 +385,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("320233cd-d7f5-4c23-bce1-3147b69616fb"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("7eaf609c-6fd1-4c2d-ae73-c7a3db960e23"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Atyrau",
                             NameEn = "Atyrau",
@@ -395,8 +395,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("00cf648f-85ef-4e91-8f85-81a5f87dbcf1"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("b38ec59e-50dd-4f76-865a-3766385f08e4"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Temirtau",
                             NameEn = "Temirtau",
@@ -405,8 +405,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cbb27d8b-ae3e-415b-8576-32f804cb2e88"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("c38a1b8b-7023-4491-9309-3d1f4159c85e"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Aktau",
                             NameEn = "Aktau",
@@ -415,8 +415,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("87dce3dc-237a-4614-89a6-7c13f5d17dbc"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("2b02a415-40ca-48ac-8a6e-2effd599410a"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Balqash",
                             NameEn = "Balqash",
@@ -425,8 +425,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("222cb539-6c3c-4f00-937d-869b92de8774"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("ddde3d4f-641a-4bf5-8e0b-00876da0cd40"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Kokshetau",
                             NameEn = "Kokshetau",
@@ -435,8 +435,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("58087ff8-9dc9-45d7-810f-0edb13b6d4e3"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("d51ed199-d5a2-424a-a6b8-cc6535f475b8"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Taldykorgan",
                             NameEn = "Taldykorgan",
@@ -445,8 +445,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6cfe3480-9cb1-4fe7-a463-99a8f2e0a1a4"),
-                            CountyId = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("1454cd0e-7461-4560-8acf-2e34cc1ae84e"),
+                            CountyId = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Kyzyl-Orda",
                             NameEn = "Kyzyl-Orda",
@@ -505,8 +505,8 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("faca1e8b-fdfc-4249-a60b-b26907e437e4"),
-                            CityId = new Guid("326e9d9b-fff1-41f3-9832-e1538bbfb247"),
+                            Id = new Guid("281b5499-70d1-43d8-ade0-d842677e1fd0"),
+                            CityId = new Guid("db2e80ab-037e-439c-a114-ad4639e77af6"),
                             Description = "ITransition is a global provider of software development, QA, and consulting services with a focus on advanced technologies.",
                             DescriptionEn = "ITransition is a global provider of software development, QA, and consulting services with a focus on advanced technologies.",
                             DescriptionRu = "ITransition — международный поставщик услуг по разработке программного обеспечения, QA и консалтинга с акцентом на передовые технологии.",
@@ -519,8 +519,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("61e54c11-4ad9-4823-89a1-f54ff4934e07"),
-                            CityId = new Guid("326e9d9b-fff1-41f3-9832-e1538bbfb247"),
+                            Id = new Guid("1b0f9f4a-59e4-48a1-9040-c4b755e3fdb6"),
+                            CityId = new Guid("db2e80ab-037e-439c-a114-ad4639e77af6"),
                             Description = "BePro-DEVHUB is a software development and IT consulting company specializing in web and mobile app development.",
                             DescriptionEn = "BePro-DEVHUB is a software development and IT consulting company specializing in web and mobile app development.",
                             DescriptionRu = "BePro-DEVHUB — это компания по разработке программного обеспечения и IT-консалтингу, специализирующаяся на разработке веб и мобильных приложений.",
@@ -533,8 +533,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("16006595-9063-4e15-9e96-61f9e46faa3f"),
-                            CityId = new Guid("326e9d9b-fff1-41f3-9832-e1538bbfb247"),
+                            Id = new Guid("17f71940-7cee-4261-9e8c-55e6f906b20e"),
+                            CityId = new Guid("db2e80ab-037e-439c-a114-ad4639e77af6"),
                             Description = "EPAM Systems is a leading global provider of digital platform engineering and software development services.",
                             DescriptionEn = "EPAM Systems is a leading global provider of digital platform engineering and software development services.",
                             DescriptionRu = "EPAM Systems — ведущий мировой поставщик цифровой платформенной инженерии и разработки программного обеспечения.",
@@ -547,8 +547,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("42b9e941-6015-4457-bb84-289bac982399"),
-                            CityId = new Guid("326e9d9b-fff1-41f3-9832-e1538bbfb247"),
+                            Id = new Guid("9085d1ca-6313-4917-b317-520f0b93c536"),
+                            CityId = new Guid("db2e80ab-037e-439c-a114-ad4639e77af6"),
                             Description = "Exadel is a global software engineering company that provides full-cycle software development, QA, and testing services.",
                             DescriptionEn = "Exadel is a global software engineering company that provides full-cycle software development, QA, and testing services.",
                             DescriptionRu = "Exadel — это международная компания по разработке программного обеспечения, предоставляющая полный цикл разработки ПО, QA и тестирования.",
@@ -596,7 +596,7 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("daab4085-2ff0-457a-9506-5160817359db"),
+                            Id = new Guid("6ca2fefd-de5c-4844-ad62-a15c5ba74c62"),
                             IsDeleted = false,
                             Name = "Uzbekistan",
                             NameEn = "Uzbekistan",
@@ -605,7 +605,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a564c265-00bf-484b-93d0-04bb3f1b0c01"),
+                            Id = new Guid("36bd9a55-29eb-4311-bd3f-d78dad771a09"),
                             IsDeleted = false,
                             Name = "Kazakhstan",
                             NameEn = "Kazakhstan",
@@ -614,7 +614,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("760bb371-d778-496e-92d5-4428b5f0c3d0"),
+                            Id = new Guid("5af653e1-66d8-4515-a410-188182c2b8a2"),
                             IsDeleted = false,
                             Name = "Turkmenistan",
                             NameEn = "Turkmenistan",
@@ -623,7 +623,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("29fd1533-9554-4b14-8f94-9ed7f45ff206"),
+                            Id = new Guid("3be5f114-857e-4737-a3ac-e50b87422d6c"),
                             IsDeleted = false,
                             Name = "Kyrgyzstan",
                             NameEn = "Kyrgyzstan",
@@ -632,7 +632,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5879b8b7-8375-42ae-a0d5-9119349e731b"),
+                            Id = new Guid("286344e3-a61e-4639-92ee-be39b023eece"),
                             IsDeleted = false,
                             Name = "Tajikistan",
                             NameEn = "Tajikistan",
@@ -641,7 +641,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0554ad50-0886-42aa-bed6-310d4da148e9"),
+                            Id = new Guid("cbd1326f-6d8d-422e-afc8-34825d9fd10b"),
                             IsDeleted = false,
                             Name = "China",
                             NameEn = "China",
@@ -650,7 +650,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e6b711c6-12f5-4d1e-bf52-afdbda941acd"),
+                            Id = new Guid("52a0f5bf-a803-430e-8ab9-beea0ca24908"),
                             IsDeleted = false,
                             Name = "India",
                             NameEn = "India",
@@ -659,7 +659,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cc71e08d-e67d-4e8b-87f4-4b68e34c4bff"),
+                            Id = new Guid("4a253450-2f45-4c72-bd9c-a7649a2290ef"),
                             IsDeleted = false,
                             Name = "Japan",
                             NameEn = "Japan",
@@ -668,7 +668,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("33c7d61b-7c9c-46e5-94ac-b0ad75c92553"),
+                            Id = new Guid("6a95939d-8640-4738-90c0-32941847a20b"),
                             IsDeleted = false,
                             Name = "South Korea",
                             NameEn = "South Korea",
@@ -677,7 +677,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2faddd5c-ab6c-4138-b987-1ed1251684ec"),
+                            Id = new Guid("20eebbb7-c42a-4760-8371-27a04ab92f91"),
                             IsDeleted = false,
                             Name = "Vietnam",
                             NameEn = "Vietnam",
@@ -686,7 +686,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8ada9c69-8bba-485a-aaad-7fa0f1e47ec2"),
+                            Id = new Guid("35928376-2b32-4517-9362-85886198fc77"),
                             IsDeleted = false,
                             Name = "Indonesia",
                             NameEn = "Indonesia",
@@ -695,7 +695,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("61d7fb5e-faac-4f4a-b42a-2443d4f88993"),
+                            Id = new Guid("3a694aa2-9d5a-4d7c-a750-1aa74277a8a9"),
                             IsDeleted = false,
                             Name = "Turkey",
                             NameEn = "Turkey",
@@ -754,8 +754,8 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("080ae2fd-92bf-4c1f-9a0b-5a6ae3b8ae8c"),
-                            CityId = new Guid("326e9d9b-fff1-41f3-9832-e1538bbfb247"),
+                            Id = new Guid("5d23afd9-a782-4df1-a08c-dbf56fb40437"),
+                            CityId = new Guid("db2e80ab-037e-439c-a114-ad4639e77af6"),
                             Description = "Tashkent University of Information Technologies (TUIT) is a leading educational institution in Uzbekistan specializing in IT and related fields.",
                             DescriptionEn = "Tashkent University of Information Technologies (TUIT) is a leading educational institution in Uzbekistan specializing in IT and related fields.",
                             DescriptionRu = "Ташкентский университет информационных технологий (ТАТУ) является ведущим образовательным учреждением в Узбекистане, специализирующимся в области ИТ и смежных направлений.",
@@ -768,8 +768,8 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3dc42997-e346-436a-b876-ec8cdd704866"),
-                            CityId = new Guid("326e9d9b-fff1-41f3-9832-e1538bbfb247"),
+                            Id = new Guid("207561ff-53f3-4c9f-b50f-4024c7da5cf6"),
+                            CityId = new Guid("db2e80ab-037e-439c-a114-ad4639e77af6"),
                             Description = "Najot Ta'lim IT Academy is an educational institution in Uzbekistan that specializes in IT education and training.",
                             DescriptionEn = "Najot Ta'lim IT Academy is an educational institution in Uzbekistan that specializes in IT education and training.",
                             DescriptionRu = "IT-академия «Наджот Таълим» - образовательное учреждение в Узбекистане, специализирующееся на образовании и тренинге в области информационных технологий.",
@@ -817,7 +817,7 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("70535164-0c62-4301-8b5f-9813f66ee6f8"),
+                            Id = new Guid("939240f6-345e-4dc0-ad9c-63ca1bd5018e"),
                             IsDeleted = false,
                             Name = "Uzbek",
                             NameEn = "Uzbek",
@@ -826,7 +826,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7a261cef-ea9a-420d-81c9-d2347818dbb5"),
+                            Id = new Guid("f02d28e7-2b65-4039-8ad0-4fdacf6a5e06"),
                             IsDeleted = false,
                             Name = "English",
                             NameEn = "English",
@@ -835,7 +835,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5c07172e-6bcb-443d-b294-496c449a058d"),
+                            Id = new Guid("29916cd1-4481-43bc-9c8a-38e1c8d09cae"),
                             IsDeleted = false,
                             Name = "Russian",
                             NameEn = "Russian",
@@ -895,7 +895,7 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7660c0a7-4c9e-4808-adab-e5c1d5a44ac3"),
+                            Id = new Guid("765552f3-4780-4a66-b6cf-295a4c1a1db9"),
                             Description = "Basic understanding of the language with limited vocabulary and simple grammar.",
                             DescriptionEn = "Basic understanding of the language with limited vocabulary and simple grammar.",
                             DescriptionRu = "Основное понимание языка с ограниченным словарным запасом и простой грамматикой.",
@@ -908,7 +908,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7f9a0e48-5177-4c05-bff5-9102c1ca7954"),
+                            Id = new Guid("3717febb-d1e6-4d77-8caf-3f3eb2781d9e"),
                             Description = "Basic comprehension of everyday expressions and simple phrases. Can introduce yourself and ask basic questions about personal information.",
                             DescriptionEn = "Basic comprehension of everyday expressions and simple phrases. Can introduce yourself and ask basic questions about personal information.",
                             DescriptionRu = "Основное понимание повседневных выражений и простых фраз. Можете представиться и задать базовые вопросы о личной информации.",
@@ -921,7 +921,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e42229d8-9e25-41d1-a098-5f4f5ce4dd95"),
+                            Id = new Guid("feaad0d5-e682-4db8-a868-385a3ec7568b"),
                             Description = "Can understand the main points of clear standard input on familiar matters. Can produce simple connected text on topics that are familiar or of personal interest.",
                             DescriptionEn = "Can understand the main points of clear standard input on familiar matters. Can produce simple connected text on topics that are familiar or of personal interest.",
                             DescriptionRu = "Можете понять основные моменты понятных стандартных вводов по знакомым вопросам. Можете составить простой связанный текст по темам, которые вам знакомы или интересны лично.",
@@ -934,7 +934,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3aca9d2c-92a0-4be4-ab3f-02766385881c"),
+                            Id = new Guid("6643773e-6f63-4205-852d-635f4f6cf5a3"),
                             Description = "Can understand the main ideas of complex text on both concrete and abstract topics. Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
                             DescriptionEn = "Can understand the main ideas of complex text on both concrete and abstract topics. Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
                             DescriptionRu = "Можете понять основные идеи сложного текста по конкретным и абстрактным темам. Можете взаимодействовать с определенной степенью беглости и спонтанности, что делает регулярное общение с носителями языка возможным без напряжения для обеих сторон.",
@@ -947,7 +947,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("381b7747-5ece-47e9-b652-0bcb4bda14b3"),
+                            Id = new Guid("79e57daf-b52c-475e-8834-b20e2bd28926"),
                             Description = "Can understand a wide range of demanding, longer texts, and recognize implicit meaning. Can express ideas fluently and spontaneously without much obvious searching for expressions.",
                             DescriptionEn = "Can understand a wide range of demanding, longer texts, and recognize implicit meaning. Can express ideas fluently and spontaneously without much obvious searching for expressions.",
                             DescriptionRu = "Можете понять широкий круг требовательных, длинных текстов и распознать неявное значение. Можете выражать идеи бегло и спонтанно без явного поиска выражений.",
@@ -960,7 +960,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c9ec08f1-14c8-4b51-9194-848359437939"),
+                            Id = new Guid("bbe7d404-b80c-48c4-b596-63b805c78474"),
                             Description = "Has a complete command of the language, including idiomatic expressions and colloquialisms. Speaks the language fluently and accurately.",
                             DescriptionEn = "Has a complete command of the language, including idiomatic expressions and colloquialisms. Speaks the language fluently and accurately.",
                             DescriptionRu = "Имеет полное владение языком, включая идиоматические выражения и разговорную речь. Говорит на языке бегло и точно.",
@@ -1024,7 +1024,7 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("eb1a1bcb-ff8b-4f1c-8424-96c0a4376c5f"),
+                            Id = new Guid("cf692e58-69ed-40db-8211-1b729d759915"),
                             Description = "Develops and maintains the server-side logic of web applications.",
                             DescriptionEn = "Develops and maintains the server-side logic of web applications.",
                             DescriptionRu = "Разрабатывает и поддерживает серверную логику веб-приложений.",
@@ -1037,7 +1037,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("bb25d5dc-2004-4df8-a53e-30adf965fec3"),
+                            Id = new Guid("64471a1b-c19a-45ab-9062-aaf12ed9fbe4"),
                             Description = "Builds and maintains the client-side of web applications.",
                             DescriptionEn = "Builds and maintains the client-side of web applications.",
                             DescriptionRu = "Строит и поддерживает клиентскую часть веб-приложений.",
@@ -1050,7 +1050,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("31697d4a-ac66-4c2d-ae2f-d7255c214f23"),
+                            Id = new Guid("c378fd13-17c8-4a30-9ee1-76e7b18b8da5"),
                             Description = "Responsible for maintaining and managing computer systems and networks within an organization.",
                             DescriptionEn = "Responsible for maintaining and managing computer systems and networks within an organization.",
                             DescriptionRu = "Ответственен за поддержание и управление компьютерными системами и сетями в организации.",
@@ -1063,7 +1063,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f3821cdc-57f1-4e27-b453-83b24e8a801a"),
+                            Id = new Guid("e7af7b28-1bb6-423c-8b5b-61b9db35b3c2"),
                             Description = "Designs, implements, and manages data communication networks such as LANs and WANs.",
                             DescriptionEn = "Designs, implements, and manages data communication networks such as LANs and WANs.",
                             DescriptionRu = "Проектирует, внедряет и управляет сетями передачи данных, такими как LAN и WAN.",
@@ -1076,7 +1076,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f0906650-55f9-44e7-8318-2ec280dfa2b1"),
+                            Id = new Guid("f40693f8-b8f0-4d87-b7a5-f69e905bc5b9"),
                             Description = "Monitors and protects an organization's computer systems and networks from cyber threats and attacks.",
                             DescriptionEn = "Monitors and protects an organization's computer systems and networks from cyber threats and attacks.",
                             DescriptionRu = "Мониторит и защищает компьютерные системы и сети организации от киберугроз и атак.",
@@ -1089,7 +1089,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("11d91322-144a-4868-8903-154a5fc3c588"),
+                            Id = new Guid("470a2747-2ab9-4529-817a-7d3ae0ebae4a"),
                             Description = "Manages and maintains an organization's database systems, ensuring data security, integrity, and availability.",
                             DescriptionEn = "Manages and maintains an organization's database systems, ensuring data security, integrity, and availability.",
                             DescriptionRu = "Управляет и поддерживает базы данных организации, обеспечивая безопасность, целостность и доступность данных.",
@@ -1102,7 +1102,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cc511c47-990f-41c7-a35f-62bd3441260f"),
+                            Id = new Guid("9c664d54-2c4b-47ed-a293-d614015ea1c5"),
                             Description = "Provides technical support and troubleshooting for IT systems and end-users within an organization.",
                             DescriptionEn = "Provides technical support and troubleshooting for IT systems and end-users within an organization.",
                             DescriptionRu = "Обеспечивает техническую поддержку и устранение неполадок для IT систем и конечных пользователей в организации.",
@@ -1115,7 +1115,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("ea88d509-99e6-440c-afe4-0cbae73c7373"),
+                            Id = new Guid("2c25b557-6497-4e82-954f-9249d2908d96"),
                             Description = "Plans, organizes, and oversees IT projects, ensuring they are completed on time, within budget, and meet organizational requirements.",
                             DescriptionEn = "Plans, organizes, and oversees IT projects, ensuring they are completed on time, within budget, and meet organizational requirements.",
                             DescriptionRu = "Планирует, организует и контролирует IT проекты, обеспечивая их выполнение в срок, в рамках бюджета и в соответствии с требованиями организации.",
@@ -1128,7 +1128,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7a1f474f-b5d5-4f63-a897-bf3188a788e7"),
+                            Id = new Guid("d34f0772-9a11-4435-abbd-e0177c281b0e"),
                             Description = "Combines software development (Dev) and IT operations (Ops), ensuring continuous integration and delivery of software.",
                             DescriptionEn = "Combines software development (Dev) and IT operations (Ops), ensuring continuous integration and delivery of software.",
                             DescriptionRu = "Комбинирует разработку программного обеспечения (Dev) и операции IT (Ops), обеспечивая непрерывную интеграцию и доставку программного обеспечения.",
@@ -1141,7 +1141,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("72344a2b-e548-4d71-ac67-e2c9040fd0b3"),
+                            Id = new Guid("f599ecbb-4d99-47e9-9676-27fead96ddf6"),
                             Description = "Analyzes complex data sets to help organizations make informed decisions.",
                             DescriptionEn = "Analyzes complex data sets to help organizations make informed decisions.",
                             DescriptionRu = "Анализирует сложные наборы данных, чтобы помочь организациям принимать обоснованные решения.",
@@ -1154,7 +1154,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("530f0de6-33da-4b36-bb5f-6e51d934545c"),
+                            Id = new Guid("3c1d4dbd-3da2-494d-8068-5f10890cf044"),
                             Description = "Designs user experiences and user interfaces for digital products to enhance user satisfaction.",
                             DescriptionEn = "Designs user experiences and user interfaces for digital products to enhance user satisfaction.",
                             DescriptionRu = "Проектирует пользовательские интерфейсы и интерфейсы пользователя для цифровых продуктов для улучшения удовлетворенности пользователя.",
@@ -1256,7 +1256,7 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("646618d5-1034-4f2d-b86f-9db45374916a"),
+                            Id = new Guid("3ea803c2-ba1c-4d19-9810-980e2e5a9ee2"),
                             IsDeleted = false,
                             Name = "Telegram",
                             NameEn = "Telegram",
@@ -1265,7 +1265,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("34d78494-8612-415f-816c-7ed967bf527b"),
+                            Id = new Guid("78afa624-e298-4151-9dac-da3ffd36188b"),
                             IsDeleted = false,
                             Name = "LinkedIn",
                             NameEn = "LinkedIn",
@@ -1274,7 +1274,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b8fac034-9ba1-4b57-8cc2-cf70aef772c6"),
+                            Id = new Guid("156c8b93-e852-4fbd-8a17-f670128daf5d"),
                             IsDeleted = false,
                             Name = "GitHub",
                             NameEn = "GitHub",
@@ -1283,7 +1283,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("be443f0d-a194-43fb-afe2-354da91e8305"),
+                            Id = new Guid("f5a4d21b-be5f-4ddf-a78a-532da2dec5ec"),
                             IsDeleted = false,
                             Name = "GitLab",
                             NameEn = "GitLab",
@@ -1292,7 +1292,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("41c1ccfc-b58c-45b4-8f4d-357888131e11"),
+                            Id = new Guid("02051f09-4183-4e00-8ece-7aae35058015"),
                             IsDeleted = false,
                             Name = "Twitter",
                             NameEn = "Twitter",
@@ -1301,7 +1301,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6829ce6e-bcb5-4e7b-b5a8-7f46fe9af225"),
+                            Id = new Guid("911800a6-ff23-44df-b6da-2d5dc4b267fc"),
                             IsDeleted = false,
                             Name = "Instagram",
                             NameEn = "Instagram",
@@ -1310,7 +1310,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cc1b88af-a918-4330-a81e-bf54fdc6ef06"),
+                            Id = new Guid("83ba18c0-a92d-4ea2-b71d-4234b2f87efb"),
                             IsDeleted = false,
                             Name = "Thread",
                             NameEn = "Thread",
@@ -1319,7 +1319,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e20b0a1d-761f-4be0-b5a8-57c9ba6e240e"),
+                            Id = new Guid("864fbb87-09c0-47c6-b189-eee80f9a2fbe"),
                             IsDeleted = false,
                             Name = "WhatsUp",
                             NameEn = "WhatsApp",
@@ -1328,7 +1328,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d155e1d8-d638-4fff-a2ae-3d252c9cb154"),
+                            Id = new Guid("71b19f76-8a74-438a-bbcf-7902c02d20eb"),
                             IsDeleted = false,
                             Name = "Skype",
                             NameEn = "Skype",
@@ -1337,7 +1337,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("58dc40a4-e892-4a2b-ab72-a491b749921c"),
+                            Id = new Guid("8320cd50-9406-43c1-bf5d-43681384a4f6"),
                             IsDeleted = false,
                             Name = "Imo",
                             NameEn = "Imo",
@@ -1346,7 +1346,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8d596863-fdf1-446f-98ba-8f83738eaa88"),
+                            Id = new Guid("8501182c-96b5-48ef-94b2-52846e75a66a"),
                             IsDeleted = false,
                             Name = "Zoom",
                             NameEn = "Zoom",
@@ -1470,10 +1470,10 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("25ba6780-cc87-439c-aa51-b96c763c2eac"),
+                            Id = new Guid("da033c1f-40ab-4369-b0e1-ed63a9456cf1"),
                             AboutMe = "I am a junior Software Engineer. Skilled and curious young software engineer with 1.5 years of experience in building robust systems using .NET Core on backend and React, Typescript on frontend. Wants to design solid architecture and clean code. Good understanding of object oriented programming and fast learning.",
                             Birthday = new DateOnly(2002, 3, 16),
-                            CityId = new Guid("326e9d9b-fff1-41f3-9832-e1538bbfb247"),
+                            CityId = new Guid("db2e80ab-037e-439c-a114-ad4639e77af6"),
                             Email = "abduqodirovsarvar.2002@gmail.com",
                             EmailConfirmed = true,
                             Firstname = "Sarvarbek",
@@ -1483,7 +1483,7 @@ namespace Infrastructure.Migrations
                             Middlename = "Xasan o'g'li",
                             PasswordHash = "hnCh7L+J7zhoRIEK6JSlWxRyPG5tWobtZxAFZO/5RwwQ6YK9oKQIm17KFOdH7U1nBt9QXjz7kRWFTOIAnqmnJg==",
                             Phone = "+998932340316",
-                            PositionId = new Guid("eb1a1bcb-ff8b-4f1c-8424-96c0a4376c5f")
+                            PositionId = new Guid("cf692e58-69ed-40db-8211-1b729d759915")
                         });
                 });
 
@@ -1588,21 +1588,21 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9326c966-d013-4962-aaeb-c701614909f9"),
-                            EducationId = new Guid("080ae2fd-92bf-4c1f-9a0b-5a6ae3b8ae8c"),
+                            Id = new Guid("3ff0ca5d-7d58-4410-a03a-944663c267bb"),
+                            EducationId = new Guid("5d23afd9-a782-4df1-a08c-dbf56fb40437"),
                             From = new DateOnly(2020, 9, 4),
                             IsDeleted = false,
                             To = new DateOnly(2024, 6, 15),
-                            UserId = new Guid("25ba6780-cc87-439c-aa51-b96c763c2eac")
+                            UserId = new Guid("da033c1f-40ab-4369-b0e1-ed63a9456cf1")
                         },
                         new
                         {
-                            Id = new Guid("afe899eb-50fb-48f0-b779-8617514f78c2"),
-                            EducationId = new Guid("3dc42997-e346-436a-b876-ec8cdd704866"),
+                            Id = new Guid("4704bd4f-25a4-48d4-b33a-e8559feda857"),
+                            EducationId = new Guid("207561ff-53f3-4c9f-b50f-4024c7da5cf6"),
                             From = new DateOnly(2022, 7, 1),
                             IsDeleted = false,
                             To = new DateOnly(2023, 4, 30),
-                            UserId = new Guid("25ba6780-cc87-439c-aa51-b96c763c2eac")
+                            UserId = new Guid("da033c1f-40ab-4369-b0e1-ed63a9456cf1")
                         });
                 });
 
@@ -1814,35 +1814,35 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("50f12780-bd12-408c-815f-7e0fc1e0f9fa"),
+                            Id = new Guid("3d4c1d7b-8ca5-409b-92d9-86469ad0f7a6"),
                             IsDeleted = false,
-                            SocialNetworkId = new Guid("646618d5-1034-4f2d-b86f-9db45374916a"),
+                            SocialNetworkId = new Guid("3ea803c2-ba1c-4d19-9810-980e2e5a9ee2"),
                             Url = "https://t.me/Sarvarbek_Abduqodirov",
-                            UserId = new Guid("25ba6780-cc87-439c-aa51-b96c763c2eac")
+                            UserId = new Guid("da033c1f-40ab-4369-b0e1-ed63a9456cf1")
                         },
                         new
                         {
-                            Id = new Guid("1e18a7f1-9d84-4e38-af9d-e70e2b2b87d1"),
+                            Id = new Guid("f5174620-700d-4434-b084-14b25bde7f9c"),
                             IsDeleted = false,
-                            SocialNetworkId = new Guid("34d78494-8612-415f-816c-7ed967bf527b"),
+                            SocialNetworkId = new Guid("78afa624-e298-4151-9dac-da3ffd36188b"),
                             Url = "https://www.linkedin.com/in/abduqodirov-sarvarbek/",
-                            UserId = new Guid("25ba6780-cc87-439c-aa51-b96c763c2eac")
+                            UserId = new Guid("da033c1f-40ab-4369-b0e1-ed63a9456cf1")
                         },
                         new
                         {
-                            Id = new Guid("372e103e-acf4-411c-979f-560fc6ba8fe4"),
+                            Id = new Guid("2db12cf4-3a15-4b7a-b2dd-b882a0af70b6"),
                             IsDeleted = false,
-                            SocialNetworkId = new Guid("b8fac034-9ba1-4b57-8cc2-cf70aef772c6"),
+                            SocialNetworkId = new Guid("156c8b93-e852-4fbd-8a17-f670128daf5d"),
                             Url = "https://github.com/AbduqodirovSarvar",
-                            UserId = new Guid("25ba6780-cc87-439c-aa51-b96c763c2eac")
+                            UserId = new Guid("da033c1f-40ab-4369-b0e1-ed63a9456cf1")
                         },
                         new
                         {
-                            Id = new Guid("7954a5b9-64f2-40aa-8514-4d98fe75509a"),
+                            Id = new Guid("72e052c0-3f3c-4757-94d2-86528d04efc3"),
                             IsDeleted = false,
-                            SocialNetworkId = new Guid("be443f0d-a194-43fb-afe2-354da91e8305"),
+                            SocialNetworkId = new Guid("f5a4d21b-be5f-4ddf-a78a-532da2dec5ec"),
                             Url = "https://gitlab.com/Abduqodirov_Sarvar",
-                            UserId = new Guid("25ba6780-cc87-439c-aa51-b96c763c2eac")
+                            UserId = new Guid("da033c1f-40ab-4369-b0e1-ed63a9456cf1")
                         });
                 });
 
@@ -1897,7 +1897,7 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4542bdfc-2cbc-4485-ab38-50f072a99224"),
+                            Id = new Guid("87b1f82a-1b57-4f82-ab86-ce6f1550b598"),
                             Description = "A student or trainee who works in a company to gain work experience.",
                             DescriptionEn = "A student or trainee who works in a company to gain work experience.",
                             DescriptionRu = "Студент или стажер, который работает в компании для получения опыта работы.",
@@ -1910,7 +1910,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b5b6b8fa-60bd-4dd7-87e6-599ba1263aea"),
+                            Id = new Guid("e1b1cdbf-73aa-4188-b348-e6451359ca23"),
                             Description = "Employee works a standard number of hours per week as defined by the employer.",
                             DescriptionEn = "Employee works a standard number of hours per week as defined by the employer.",
                             DescriptionRu = "Сотрудник работает стандартное количество часов в неделю, определенное работодателем.",
@@ -1923,7 +1923,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("f9cfb973-847b-456d-a83e-4e5a5750f78a"),
+                            Id = new Guid("4554c1c6-2b8d-42ba-8e7a-dc935c0f63f4"),
                             Description = "Employee works fewer hours than a full-time employee.",
                             DescriptionEn = "Employee works fewer hours than a full-time employee.",
                             DescriptionRu = "Сотрудник работает меньше часов, чем на полный рабочий день.",
@@ -1936,7 +1936,7 @@ namespace Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e552217c-60f6-40a4-91f3-cd5f804fb5df"),
+                            Id = new Guid("d6a308cb-9d4b-4b94-8c6e-9ebd91bf5b1e"),
                             Description = "Employee works from a location other than the office.",
                             DescriptionEn = "Employee works from a location other than the office.",
                             DescriptionRu = "Сотрудник работает не в офисе, а на удаленной основе.",
@@ -1996,7 +1996,7 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("CityId");
 
                     b.HasOne("Domain.Entities.Position", "Position")
-                        .WithMany("Users")
+                        .WithMany()
                         .HasForeignKey("PositionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -2008,13 +2008,11 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.UserCertificate", b =>
                 {
-                    b.HasOne("Domain.Entities.User", "User")
+                    b.HasOne("Domain.Entities.User", null)
                         .WithMany("Certificates")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.UserEducation", b =>
@@ -2025,15 +2023,13 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.User", "User")
+                    b.HasOne("Domain.Entities.User", null)
                         .WithMany("Educations")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Education");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.UserExperience", b =>
@@ -2050,14 +2046,14 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.User", "User")
+                    b.HasOne("Domain.Entities.User", null)
                         .WithMany("Experiences")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Domain.Entities.WorkType", "WorkType")
-                        .WithMany("UserExperience")
+                        .WithMany()
                         .HasForeignKey("WorkTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -2065,8 +2061,6 @@ namespace Infrastructure.Migrations
                     b.Navigation("Company");
 
                     b.Navigation("Position");
-
-                    b.Navigation("User");
 
                     b.Navigation("WorkType");
                 });
@@ -2085,7 +2079,7 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.User", "User")
+                    b.HasOne("Domain.Entities.User", null)
                         .WithMany("Languages")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -2094,19 +2088,15 @@ namespace Infrastructure.Migrations
                     b.Navigation("Language");
 
                     b.Navigation("Level");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.UserProject", b =>
                 {
-                    b.HasOne("Domain.Entities.User", "User")
+                    b.HasOne("Domain.Entities.User", null)
                         .WithMany("Projects")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.UserSkill", b =>
@@ -2117,15 +2107,13 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.User", "User")
+                    b.HasOne("Domain.Entities.User", null)
                         .WithMany("Skills")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Skill");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.UserSocialNetwork", b =>
@@ -2136,15 +2124,13 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.User", "User")
+                    b.HasOne("Domain.Entities.User", null)
                         .WithMany("SocialNetworks")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("SocialNetwork");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.City", b =>
@@ -2157,11 +2143,6 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.Country", b =>
                 {
                     b.Navigation("Cities");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Position", b =>
-                {
-                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
@@ -2184,11 +2165,6 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.UserProject", b =>
                 {
                     b.Navigation("Skills");
-                });
-
-            modelBuilder.Entity("Domain.Entities.WorkType", b =>
-                {
-                    b.Navigation("UserExperience");
                 });
 #pragma warning restore 612, 618
         }

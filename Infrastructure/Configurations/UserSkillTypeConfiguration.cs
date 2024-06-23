@@ -14,7 +14,6 @@ namespace Infrastructure.Configurations
         public override void Configure(EntityTypeBuilder<UserSkill> builder)
         {
             base.Configure(builder);
-            builder.HasOne(x => x.User).WithMany(x => x.Skills).HasForeignKey(x => x.UserId);
             builder.HasOne(x => x.Skill).WithMany().HasForeignKey(x => x.SkillId);
             builder.HasIndex(x => new {x.UserId, x.SkillId}).IsUnique();
         }

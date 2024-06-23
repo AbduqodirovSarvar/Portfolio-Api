@@ -10,7 +10,7 @@ namespace Domain.Entities
     public class UserEducation : BaseEntity
     {
         public Guid UserId { get; set; }
-        public User? User { get; set; }
+       // public User? User { get; set; }
         public Guid EducationId { get; set; }
         public Education? Education { get; set; }
         public DateOnly From { get; set; }
