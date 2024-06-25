@@ -14,28 +14,6 @@ namespace Infrastructure.Configurations
         public override void Configure(EntityTypeBuilder<Language> builder)
         {
             base.Configure(builder);
-            builder.HasData([.. DefaultLanguages]);
         }
-
-        public static readonly List<Language> DefaultLanguages = [
-                new Language(){
-                    Name = "Uzbek",
-                    NameUz = "O'zbekcha",
-                    NameEn = "Uzbek",
-                    NameRu = "Узбекский",
-                },
-                new Language(){
-                    Name = "English",
-                    NameUz = "Inglizcha",
-                    NameEn = "English",
-                    NameRu = "Английский",
-                },
-                new Language(){
-                    Name = "Russian",
-                    NameUz = "Ruscha",
-                    NameEn = "Russian",
-                    NameRu = "Русский",
-                }
-            ];
     }
 }

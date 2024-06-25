@@ -14,12 +14,7 @@ namespace Infrastructure.Configurations
         public override void Configure(EntityTypeBuilder<City> builder)
         {
             base.Configure(builder);
-            builder.HasOne(x => x.Country).WithMany(x => x.Cities).HasForeignKey(x => x.CountyId);
-            builder.HasMany(x => x.Companies).WithOne(x => x.City).HasForeignKey(x => x.CityId);
-            builder.HasMany(x => x.Educations).WithOne(x => x.City).HasForeignKey(x => x.CityId);
-            builder.HasData([.. UzbekistanCities.Concat(KazakhstanCities)]);
+            builder.HasOne(x => x.Country).WithMany().HasForeignKey(x => x.CountyId);
         }
-
-        
     }
 }

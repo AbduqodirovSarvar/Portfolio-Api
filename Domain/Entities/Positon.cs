@@ -9,6 +9,5 @@ namespace Domain.Entities
 {
     public class Position : LocalizableWithDescriptionEntity
     {
-        //public ICollection<User> Users { get; set; } = [];
     }
 }

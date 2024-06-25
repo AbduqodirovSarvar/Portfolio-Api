@@ -84,6 +84,7 @@ catch (Exception ex)
 {
     Console.WriteLine($"Error applying migrations: {ex.Message}");
 }
+await context.Seed();
 
 app.MapControllers();
 

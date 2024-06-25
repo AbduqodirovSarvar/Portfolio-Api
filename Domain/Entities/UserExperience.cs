@@ -10,7 +10,6 @@ namespace Domain.Entities
     public class UserExperience : BaseEntity
     {
         public Guid UserId { get; set; }
-      //  public User? User { get; set; }
         public Guid CompanyId { get; set; }
         public Company? Company { get; set; }
         public Guid PositionId { get; set; }

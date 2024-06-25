@@ -10,7 +10,6 @@ namespace Domain.Entities
     public class UserProject : LocalizableWithDescriptionEntity
     {
         public Guid UserId { get; set; }
-       // public User? User { get; set; }
         public string UrlSrc { get; set; } = null!;
         public string? Url { get; set; }
         public string? PhotoName { get; set; }

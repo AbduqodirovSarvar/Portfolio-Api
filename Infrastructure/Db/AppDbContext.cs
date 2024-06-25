@@ -59,8 +59,54 @@ namespace Infrastructure.Db
 
         public async Task Seed()
         {
-            using var _context = this.GetService<IAppDbContext>();
-           
+            using var _context = this.GetService<AppDbContext>();
+
+            _context.Countries.AddRange(DefaultInformations.DefaultCountryData.Countries);
+            _context.Languages.AddRange(DefaultInformations.DefaultLanguageData.DefaultLanguages);
+            _context.Levels.AddRange(DefaultInformations.DefaultLevelData.DefaultLevels);
+            _context.Positions.AddRange(DefaultInformations.DefaultPositionData.DefaultPositions);
+            _context.SocialNetworks.AddRange(DefaultInformations.DefaultSocialNetworkData.DefaultSocialNetworks);
+            _context.WorkTypes.AddRange(DefaultInformations.DefaultWorkTypeData.DefaultWorkTypes);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            _context.Cities.AddRange(DefaultInformations.DefaultCityData.DefaultCities);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            _context.Users.Add(DefaultInformations.DefaultUserData.DefaultUser);
+            _context.Educations.AddRange(DefaultInformations.DefaultEducationData.DefaultEducations);
+            _context.Companies.AddRange(DefaultInformations.DefaultCompanyData.DefaultCompanies);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            _context.UserEducations.AddRange(DefaultInformations.DefaultUserEducationData.DefaultUserEducations);
+            _context.UserExperiences.AddRange(DefaultInformations.DefaultUserExperienceData.DefaultUserExperience);
+            _context.UserLanguages.AddRange(DefaultInformations.DefaultUserLanguageData.DefaultUserLanguages);
+            _context.UserSocialNetworks.AddRange(DefaultInformations.DefaultUserSocialNetworkData.DefaultUserSocialNetworks);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         private void SetAuditableEntity()

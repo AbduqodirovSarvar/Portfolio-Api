@@ -10,7 +10,6 @@ namespace Domain.Entities
     public class UserSocialNetwork : BaseEntity
     {
         public Guid UserId { get; set; }
-      //  public User? User { get; set; }
         public Guid SocialNetworkId { get; set; }
         public SocialNetwork? SocialNetwork { get; set; }
         public string Url { get; set; } = null!;
